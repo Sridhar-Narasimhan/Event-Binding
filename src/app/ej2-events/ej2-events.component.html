@@ -1,0 +1,14 @@
+<!-- HTML Declarative event binding  -->
+<h3>New Item</h3>
+<div style="width:150px">
+<input class="e-input" name="msg" (keyup)="item= $event.target.value" placeholder="New item"/>
+</div>
+<h3>{{item}}</h3>
+<!-- JavaScript code binding  -->
+
+<button ejs-button (click)='onClick()'>Click to Add </button>
+<h3 >To DO </h3>
+<div style="width:200px">
+<ejs-listview id="previewlist" [(dataSource)]='items' ></ejs-listview>
+</div>
+<ejs-dropdownlist id='games' #sample [dataSource]='sportsData' (change)='onChange($event)'  [fields]='fields'></ejs-dropdownlist>

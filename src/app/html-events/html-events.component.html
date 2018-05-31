@@ -1,0 +1,13 @@
+<!-- HTML Declarative event binding  -->
+<h3>New Item</h3>
+<input name="msg" (keyup)="item= $event.target.value" placeholder="New item"/>
+<h3>{{item}}</h3>
+<!-- JavaScript code binding  -->
+
+<button (click)='onClick()'>Click to Add </button>
+<h3 >To DO </h3>
+<ul>
+  <li style="font-style: italic" *ngFor="let item of items">
+    {{item}}
+  </li>
+</ul>
